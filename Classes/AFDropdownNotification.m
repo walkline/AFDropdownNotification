@@ -90,7 +90,7 @@
         [_topButton setTitle:_topButtonText forState:UIControlStateNormal];
         [_bottomButton setTitle:_bottomButtonText forState:UIControlStateNormal];
         
-        NSInteger textWidth = [[UIScreen mainScreen] bounds].size.width - 4 * kDropdownPadding - 2 * kDropdownButtonWidth;
+        NSInteger textWidth = [[UIScreen mainScreen] bounds].size.width - 4 * kDropdownPadding - 2 * kDropdownButtonWidth - kDropdownImageSize;
         NSInteger titleHeight = [_titleLabel.text boundingRectWithSize:CGSizeMake(textWidth, 999) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Medium" size:kDropdownTitleFontSize]} context:nil].size.height;
         NSInteger subtitleHeight = [_subtitleLabel.text boundingRectWithSize:CGSizeMake(textWidth, 999) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue" size:kDropdownSubtitleFontSize]} context:nil].size.height;
         NSInteger notificationHeight = (20 + kDropdownPadding + titleHeight + (subtitleHeight > 0 ? kDropdownPadding / 2.0 : 0.0) + subtitleHeight + kDropdownPadding);
